@@ -248,7 +248,7 @@ public class GraphicsPanel extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvt) {
 
-				if (serverConnection) {
+				if (serverConnection && !leftMove.isRunning()) {
 					try {
 						dataOut.writeUTF("left");
 					} catch (IOException e) {
@@ -282,7 +282,7 @@ public class GraphicsPanel extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvt) {
 
-				if (serverConnection) {
+				if (serverConnection && !rightMove.isRunning()) {
 					try {
 						dataOut.writeUTF("right");
 					} catch (IOException e) {
@@ -316,7 +316,7 @@ public class GraphicsPanel extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvt) {
 
-				if (serverConnection) {
+				if (serverConnection && !upMove.isRunning()) {
 					try {
 						dataOut.writeUTF("up");
 					} catch (IOException e) {
@@ -350,7 +350,7 @@ public class GraphicsPanel extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent actionEvt) {
 
-				if (serverConnection) {
+				if (serverConnection && !downMove.isRunning()) {
 					try {
 						dataOut.writeUTF("down");
 					} catch (IOException e) {
